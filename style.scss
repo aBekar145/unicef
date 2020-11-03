@@ -1,3 +1,27 @@
+@mixin button() {
+  padding: 10px;
+  font-size: 16px;
+  background: #00AEEF;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 3px #00AEEF;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  outline: none;
+  transition-duration: 0.5s;
+  &:hover {
+    box-shadow: none;
+    background-color: #047ca8;
+  }
+  &:active {
+    color: #052733;
+  }
+}
+
+
 :root {
   font-size: 10px;
 }
@@ -12,30 +36,34 @@ html, body {
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 400;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 21px;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.1rem;
   color: #ffffff;
 }
 
 .wrapper {
-  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 120rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+
 .banner {
-  padding: 15px;
-  max-width: 728px;
+  margin-bottom: 40px;
+  padding: 1.5rem;
+  max-width: 72.8rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: no-repeat center 50% url("../images/unnamed.jpg");
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  &__logo-wrapper {
-    margin-right: 40px;
-  }
+  background: no-repeat center 50% url("/images/unnamed.jpg");
+
   &__logo-icon {
+    margin-right: 40px;
     border-radius: 100%;
     width: 60px;
     height: 60px;
@@ -57,24 +85,54 @@ html, body {
     }
   }
   &__btn {
-    padding: 10px;
-    font-size: 16px;
-    background: #00AEEF;
-    color: #ffffff;
-    text-transform: uppercase;
-    box-shadow: inset 0 0 0 3px #00AEEF;
-    font-weight: 700;
-    border: none;
-    border-radius: 10%;
-    cursor: pointer;
-    outline: none;
-    transition-duration: 0.5s;
-    &:hover {
-      box-shadow: none;
-      background-color: #047ca8;
+    @include button();
+  }
+}
+
+.banner-2 {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  min-height: 250px;
+  width: 100%;
+  background: no-repeat center 50% url("/images/image-2.jpg");
+  &__logo-icon {
+    margin-right: 40px;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+  }
+
+
+  &__subtitle {
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17px;
+    &-span-bold {
+      margin-bottom: 5px;
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 27px;
     }
-    &:active {
-      color: #052733;
-    }
+  }
+  &__btn {
+    margin-top: 16px;
+    @include button();
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
   }
 }
