@@ -48,7 +48,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: no-repeat center 50% url("/images/unnamed.jpg");
+  background: no-repeat center 50% url("images/unnamed.jpg");
 }
 
 .banner__logo-icon {
@@ -197,7 +197,7 @@ html, body {
   max-width: 300px;
   min-height: 250px;
   width: 100%;
-  background: no-repeat center 50% url("/images/image-2.jpg");
+  background: no-repeat center 50% url("images/image-2.jpg");
 }
 
 .banner-2__logo-icon {

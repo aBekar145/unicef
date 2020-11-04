@@ -65,7 +65,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: no-repeat center 50% url("/images/unnamed.jpg");
+  background: no-repeat center 50% url("images/unnamed.jpg");
 
   &__logo-icon {
     margin-right: 40px;
@@ -137,7 +137,7 @@ html, body {
   max-width: 300px;
   min-height: 250px;
   width: 100%;
-  background: no-repeat center 50% url("/images/image-2.jpg");
+  background: no-repeat center 50% url("images/image-2.jpg");
   &__logo-icon {
     margin-right: 40px;
     @include logo();
