@@ -37,8 +37,8 @@ html, body {
 
 .banner {
   margin-bottom: 40px;
-  padding: 1.5rem;
-  max-width: 72.8rem;
+  padding: 15px;
+  max-width: 728px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,6 +78,8 @@ html, body {
   font-weight: 700;
   font-size: 25px;
   line-height: 21px;
+  -webkit-animation: bold-text 3s 1;
+          animation: bold-text 3s 1;
 }
 
 .banner__btn {
@@ -106,6 +108,78 @@ html, body {
 
 .banner__btn:active {
   color: #052733;
+}
+
+@-webkit-keyframes bold-text-2 {
+  0% {
+    color: transparent;
+  }
+  30% {
+    color: transparent;
+  }
+  50% {
+    color: #00AEEF;
+    font-size: 20px;
+    line-height: 17px;
+  }
+  85% {
+    color: #00AEEF;
+    font-size: 23px;
+    line-height: 20px;
+  }
+  100% {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 21px;
+  }
+}
+
+@keyframes bold-text-2 {
+  0% {
+    color: transparent;
+  }
+  30% {
+    color: transparent;
+  }
+  50% {
+    color: #00AEEF;
+    font-size: 20px;
+    line-height: 17px;
+  }
+  85% {
+    color: #00AEEF;
+    font-size: 23px;
+    line-height: 20px;
+  }
+  100% {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 21px;
+  }
+}
+
+@-webkit-keyframes bold-text {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #00AEEF;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+@keyframes bold-text {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: #00AEEF;
+  }
+  100% {
+    color: #ffffff;
+  }
 }
 
 .banner-2 {
@@ -154,6 +228,8 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 27px;
+  -webkit-animation: bold-text-2 3s linear 1 normal running 0s none;
+          animation: bold-text-2 3s linear 1 normal running 0s none;
 }
 
 .banner-2__btn {
@@ -185,6 +261,99 @@ html, body {
   color: #052733;
 }
 
+.banner-3 {
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 160px;
+  width: 100%;
+  background: #fcf7f7;
+}
+
+.banner-3__content-wrap {
+  padding: 16px;
+}
+
+.banner-3__logo-icon {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+.banner-3__subtitle {
+  margin-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.banner-3__subtitle-span-bold {
+  margin-bottom: 5px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 23px;
+}
+
+.banner-3__btn {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  padding: 10px;
+  font-size: 16px;
+  background: #00AEEF;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-box-shadow: inset 0 0 0 3px #00AEEF;
+          box-shadow: inset 0 0 0 3px #00AEEF;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.banner-3__btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #047ca8;
+}
+
+.banner-3__btn:active {
+  color: #052733;
+}
+
+.banner-3__image {
+  max-width: 160px;
+  min-height: 248px;
+  background: no-repeat center 50% url(images/image-3.jpg);
+}
+
+.block-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 @media screen and (max-width: 600px) {
   .banner {
     display: -webkit-box;
@@ -198,6 +367,19 @@ html, body {
         -ms-flex-align: start;
             align-items: flex-start;
     row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .block-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
